@@ -78,7 +78,7 @@ ex:
 
 }
 let rocket1 = new Rocket('Starship', 'SpaceX')
-let rocket2 = new Rocket('Mangalyan','ISRO')
+let rocket2 = new Rocket('New Shepard','Blue Orgin')
 
 Another way of creating object is 'Object.create()' method
 
