@@ -36,7 +36,7 @@ HTTP/1.1 loads resources one after the other, so if one resource cannot be loade
 
 ![binary-image](https://miro.medium.com/max/700/0*0LtM_XmkauxVoY8M.png)
 
-HTTP/1.1 used to process text commands to complete request-response cycles. HTTP/2 will use binary commands (in 1s and 0s) to execute the same tasks. Browsers using HTTP/2 implementation will convert the same text commands into binary before transmitting it over the network.
+HTTP/1.1 used to process text commands to complete request-response cycles. HTTP/2 will use binary commands in 1s and 0s to execute the same tasks. Browsers using HTTP/2 implementation will convert the same text commands into binary before transmitting it over the network.
 
 ### Server push:
 
