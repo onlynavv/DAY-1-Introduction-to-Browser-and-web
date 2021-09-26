@@ -24,9 +24,9 @@ Coming to topic prioritization as we have discussed earlier, prioritization refe
 
 Prioritization affects a webpage's load time. For example in certain resources, like large JavaScript files, may block the rest of the page from loading if they have to load first. More of the page can load at once if these render-blocking resources load last. In addition the order in which these page resources load affects how the user perceives page load time. If only behind-the-scenes content like CSS file or content the user can't see immediately like banner ads at the bottom of the page loads first, the user will think the page is not loading at all. If the content that's most important to the user loads first, such as the image at the top of the page, then the user will perceive/thinks the page as loading faster. In HTTP/2, developers have hands-on, detailed control over prioritization, HTTP/2 offers a feature called weighted prioritization. This allows developers to decide which page resources will load first every time. In HTTP/2 when a client makes a request for a webpage the server sends several streams of data to the client at once, instead of sending one thing after another. This method of data delivery is known as 'multiplexing'. Developers can assign each of these data streams a different weighted value and the value tells the client which data stream to render first.
 
-> HTTP2 is fully multiplexed, instead of ordered and blocking
-
 ### Multiplexing:
+
+> HTTP2 is fully multiplexed, instead of ordered and blocking
 
 HTTP/1.1 loads resources one after the other, so if one resource cannot be loaded, it blocks all the other resources behind it. In contrast, HTTP/2 is able to use a single TCP connection to send multiple streams of data at once so that no one resource blocks any other resource. HTTP/2 does this by splitting data into binary-code messages and numbering these messages so that the client knows which stream each binary message belongs to.
 
@@ -38,17 +38,17 @@ HTTP/1.1 loads resources one after the other, so if one resource cannot be loade
 
 HTTP/1.1 used to process text commands to complete request-response cycles. HTTP/2 will use binary commands (in 1s and 0s) to execute the same tasks. Browsers using HTTP/2 implementation will convert the same text commands into binary before transmitting it over the network.
 
-> HTTP/2 allows servers to “push” responses proactively into client devices
-
 ### Server push:
+
+> HTTP/2 allows servers to “push” responses proactively into client devices
 
 Server only serves content to a client device if the client asks for it. HTTP/2 solves this problem by allowing a server to "push" content to a client before the client asks for it. The server also sends a message letting the client know what pushed content to expect
 
 ![server-push](https://miro.medium.com/max/498/0*ZJLgVdXq_06hcF1o.png)
 
-> HTTP/2 uses header compression to reduce overhead
-
 ### Header compression:
+
+> HTTP/2 uses header compression to reduce overhead
 
 Small files load more quickly than large ones. To speed up web performance, both HTTP/1.1 and HTTP/2 compress HTTP messages to make them smaller. However, HTTP/2 uses a more advanced compression method called HPACK that eliminates redundant information in HTTP header packets. This eliminates a few bytes from every HTTP packet. Given the volume of HTTP packets involved in loading even a single webpage, those bytes add up quickly, resulting in faster loading.
 
